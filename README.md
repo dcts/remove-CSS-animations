@@ -10,7 +10,7 @@ This repo is a shortcut to remove css transitions, transformations and animation
 ### Chrome Console
 First test if this script works locally in your browser (chrome, firefox, etc). Open the page you want to disable animations and css transitions and then execute the following code inside the console:
 ```js
-let filePath = "https://raw.githubusercontent.com/dcts/remove-CSS-animations/master/css/remove.css";
+let filePath = "https://dl.dropboxusercontent.com/s/ep1nzckmvgjq7jr/remove_transitions_from_page.css";
 let html = `<link rel="stylesheet" type="text/css" href="${filePath}">`;
 document.querySelector("html > head").insertAdjacentHTML("beforeend", html);
 ```
