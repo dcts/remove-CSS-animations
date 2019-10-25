@@ -30,18 +30,7 @@ require 'selenium-webdriver'
 # 3. go to website with some css animations
 @driver.get("https://dcts.github.io/javascript30-codingChallenges/days/02/")
 
-# 4. disable animations (JAVASCRIPT SAVED AS RUBY STRINGS)
-cssFilePath = "https://raw.githubusercontent.com/dcts/remove-CSS-animations/master/css/remove.css"
-js_arr = []
-js_arr << "const linkElement = \"<link rel='stylesheet' type='text/css' href='#{cssFilePath}'>\";"
-js_arr << "const head = document.querySelector('html > head');"
-js_arr << "head.insertAdjacentHTML(\"beforeend\", linkElement);"
-@driver.script(js_arr.join(""));
-```
-
-Step 4 can also be written in one line:
-```ruby
-# 4. disable animations (ONE-LINER)
-@driver.script("document.querySelector('html > head').insertAdjacentHTML(\"beforeend\", \"<link rel='stylesheet' type='text/css' href='https://raw.githubusercontent.com/dcts/remove-CSS-animations/master/css/remove.css'>\");");
+# 4. disable animations (JAASCRPT ONELINER SAVED AS RUBY STRING)
+@driver.script("document.querySelector('html > head').insertAdjacentHTML(\"beforeend\", \"<link rel='stylesheet' type='text/css' href='https://dl.dropboxusercontent.com/s/ep1nzckmvgjq7jr/remove_transitions_from_page.css'>\");");
 ```
 
